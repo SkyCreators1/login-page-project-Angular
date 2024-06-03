@@ -1,14 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TabsComponent } from './shared/tabs/tabs.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    TabsComponent,
+    NavbarComponent,
+    FooterComponent
+  ],
   template: `
-    <h1>Welcome to {{title}}!</h1>
+    <app-navbar/>
+    <app-tabs/>
+    <app-footer/>
 
-    <router-outlet />
+
   `,
   styles: [],
 })
